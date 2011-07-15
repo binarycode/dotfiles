@@ -40,18 +40,11 @@ set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLM
 inoremap <silent> <F2> <ESC>u:set paste<CR>.:set nopaste<CR>gi
 
 " quickly move between tabs
-map <A-1> 1gt
-map <A-2> 2gt
-map <A-3> 3gt
-map <A-4> 4gt
-map <A-5> 5gt
-map <A-6> 6gt
-map <A-7> 7gt
-map <A-8> 8gt
-map <A-9> 9gt
+map <C-k> :tabn<CR>
+map <C-j> :tabp<CR>
 
 " create new tab
-map <C-t> :tabnew<CR>
+map <C-n> :tabnew<CR>
 
 " remove gui bells and whistles
 set guioptions-=m
@@ -65,7 +58,8 @@ set guioptions-=l
 source $VIMRUNTIME/mswin.vim
 behave mswin
 " TODO this should be replaced with
-" set clipboard=unnamedplus
+set clipboard=unnamed
+"set clipboard=unnamedplus
 " but this clipboard type is availible in vim version that is not in ubuntu
 " ppa yet
 
