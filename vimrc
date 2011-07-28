@@ -1,3 +1,5 @@
+set nocompatible
+
 " pathogen
 filetype off
 call pathogen#runtime_append_all_bundles()
@@ -10,13 +12,14 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set smarttab
-set smartindent
+set smartindent " TESTING
+
+set number
+
+set cursorline
 
 " enable modeline
 set modeline
-
-" selecting with mouse
-set mouse=a
 
 " colorscheme
 set t_Co=256
@@ -55,8 +58,6 @@ set guioptions-=L
 set guioptions-=l
 
 " copy/paste workaround
-source $VIMRUNTIME/mswin.vim
-behave mswin
 " TODO this should be replaced with
 set clipboard=unnamed
 "set clipboard=unnamedplus
@@ -64,7 +65,11 @@ set clipboard=unnamed
 " ppa yet
 
 " NERDTree
+let NERDTreeShowFiles=1
+let NERDTreeShowHidden=1
 nmap <silent> <c-b> :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1
+let NERDTreeHighlightCursorline=1
 
 " Command-T
 let g:CommandTMaxHeight=7
@@ -75,3 +80,6 @@ set wildignore+=vendor/ruby/**
 " vim-fugitive
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
+
+" syntastic
+let g:syntastic_enable_signs=1
