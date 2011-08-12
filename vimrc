@@ -57,13 +57,6 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=l
 
-" copy/paste workaround
-" TODO this should be replaced with
-set clipboard=unnamed
-"set clipboard=unnamedplus
-" but this clipboard type is availible in vim version that is not in ubuntu
-" ppa yet
-
 " NERDTree
 let NERDTreeShowFiles=1
 let NERDTreeShowHidden=1
@@ -73,7 +66,7 @@ let NERDTreeHighlightCursorline=1
 
 " Command-T
 let g:CommandTMaxHeight=7
-nmap <silent> <F3> :CommandT<CR>
+nmap <silent> <C-o> :CommandT<CR>
 nmap <Leader>r :CommandTFlush<CR>
 set wildignore+=vendor/ruby/**
 
