@@ -39,16 +39,6 @@ set listchars=tab:»·,trail:·,eol:¶
 " allow russian in commands
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
-" clean pasting
-inoremap <silent> <F2> <ESC>u:set paste<CR>.:set nopaste<CR>gi
-
-" quickly move between tabs
-map <C-k> :tabn<CR>
-map <C-j> :tabp<CR>
-
-" create new tab
-map <C-n> :tabnew<CR>
-
 " remove gui bells and whistles
 set guioptions-=m
 set guioptions-=T
@@ -66,7 +56,7 @@ let NERDTreeHighlightCursorline=1
 
 " Command-T
 let g:CommandTMaxHeight=7
-nmap <silent> <C-o> :CommandT<CR>
+nmap <silent> <D-i> :CommandT<CR>
 nmap <Leader>r :CommandTFlush<CR>
 set wildignore+=vendor/ruby/**
 
