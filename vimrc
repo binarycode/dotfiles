@@ -54,15 +54,17 @@ nmap <silent> <c-b> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 let NERDTreeHighlightCursorline=1
 
-" Command-T
-let g:CommandTMaxHeight=7
-nmap <silent> <D-i> :CommandT<CR>
-nmap <Leader>r :CommandTFlush<CR>
-set wildignore+=vendor/ruby/**
-
 " vim-fugitive
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
 
 " syntastic
 let g:syntastic_enable_signs=1
+
+" ctrlp
+let g:ctrlp_custom_ignore = { 'dir': '\.git$\|tmp$\|public$\|vendor$\|\.bundle$' }
+
+" misc
+autocmd BufNewFile,BufRead *.thor set syntax=ruby
+
+set so=999
