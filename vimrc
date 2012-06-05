@@ -18,6 +18,8 @@ set number
 
 set cursorline
 
+set hlsearch
+
 " enable modeline
 set modeline
 
@@ -64,7 +66,29 @@ let g:syntastic_enable_signs=1
 " ctrlp
 let g:ctrlp_custom_ignore = { 'dir': '\.git$\|tmp$\|public$\|vendor$\|\.bundle$' }
 
+" I type W instead of w all the time
+command! -bang Q q<bang>
+command! -bang W w<bang>
+
+" tab tweaks
+map th :tabnext<CR>
+map tl :tabprev<CR>
+map tn :tabnew<CR>
+map td :tabclose<CR>
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" those pesky backups
+set nobackup
+set noswapfile
+
+" some good advices from nvie.com
+nnoremap ; :
+
 " misc
 autocmd BufNewFile,BufRead *.thor set syntax=ruby
+au BufRead,BufNewFile *.rabl setf ruby
 
 set so=999
