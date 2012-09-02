@@ -23,8 +23,6 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'bbommarito/vim-slim'
 
-
-
 filetype plugin indent on
 syntax on
 
@@ -85,6 +83,7 @@ set laststatus=2
 let g:syntastic_enable_signs=1
 
 " ctrlp
+let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_custom_ignore = { 'dir': '\.git$\|tmp$\|public$\|vendor$\|\.bundle$' }
 
 " I type W instead of w all the time
