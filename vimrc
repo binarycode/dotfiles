@@ -105,6 +105,9 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 set nobackup
 set noswapfile
 
+" EasyMotion
+let g:EasyMotion_leader_key = '<Leader>'
+
 " some good advices from nvie.com
 nnoremap ; :
 
