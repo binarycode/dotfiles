@@ -56,8 +56,15 @@ set ofu=syntaxcomplete#Complete
 set completeopt=longest
 
 " show special symbols
-set listchars=tab:»·,trail:·,eol:¶
-
+" List chars
+set list
+set listchars=""                  " Reset the listchars
+set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
+set listchars+=trail:.            " show trailing spaces as dots
+set listchars+=extends:>          " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the right of the screen
+set listchars+=precedes:<         " The character to show in the first column when wrap is
+                                  " off and the line continues beyond the left of the screen
 " allow russian in commands
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
@@ -110,6 +117,15 @@ let g:EasyMotion_leader_key = '<Leader>'
 
 " some good advices from nvie.com
 nnoremap ; :
+
+" find merge conflict markers
+nmap <silent> <leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
+
+" easier navigation between split windows
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 " misc
 autocmd BufNewFile,BufRead *.thor set syntax=ruby
