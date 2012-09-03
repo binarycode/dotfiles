@@ -23,6 +23,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'bbommarito/vim-slim'
+Bundle 'mileszs/ack.vim'
 
 filetype plugin indent on
 syntax on
