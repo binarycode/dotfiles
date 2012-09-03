@@ -84,10 +84,6 @@ nmap <silent> <c-b> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 let NERDTreeHighlightCursorline=1
 
-" vim-fugitive
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-set laststatus=2
-
 " syntastic
 let g:syntastic_enable_signs=1
 
