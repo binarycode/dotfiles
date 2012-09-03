@@ -129,3 +129,6 @@ autocmd BufNewFile,BufRead *.thor set syntax=ruby
 au BufRead,BufNewFile *.rabl setf ruby
 
 set so=999
+
+" Statusline should be always visible
+set laststatus=2
