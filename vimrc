@@ -95,12 +95,6 @@ let g:ctrlp_custom_ignore = { 'dir': '\.git$\|tmp$\|public$\|vendor$\|\.bundle$'
 command! -bang Q q<bang>
 command! -bang W w<bang>
 
-" tab tweaks
-map th :tabnext<CR>
-map tl :tabprev<CR>
-map tn :tabnew<CR>
-map td :tabclose<CR>
-
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
