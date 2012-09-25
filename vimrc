@@ -24,6 +24,8 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'bbommarito/vim-slim'
 Bundle 'mileszs/ack.vim'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'airblade/vim-rooter'
 
 filetype plugin indent on
 syntax on
@@ -33,7 +35,7 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set smarttab
-set smartindent " TESTING
+set smartindent
 
 set number
 
@@ -134,3 +136,11 @@ nnoremap tj  :tabprev<CR>
 nnoremap tl  :tablast<CR>
 nnoremap tn  :tabnew<CR>
 nnoremap td  :tabclose<CR>
+
+" Indent guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=240
