@@ -1,3 +1,4 @@
+" Do not be compatible with ancient vi
 set nocompatible
 
 " Vundle
@@ -24,24 +25,27 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'bbommarito/vim-slim'
 Bundle 'mileszs/ack.vim'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'airblade/vim-rooter'
 
-filetype plugin indent on
-syntax on
+filetype plugin indent on " Enable loading plugin and indent files for specific file types
+syntax on " Syntax highlight
 
-" identation
+" Identation
 set expandtab
 set shiftwidth=2
 set softtabstop=2
 set smarttab
-set smartindent
 
 set number
 
 set cursorline
 
+" enable search highlighting and incremental search
 set hlsearch
+set incsearch
+
+" Hide search highlight on escape
+nnoremap <esc> :noh<return><esc>
 
 " enable modeline
 set modeline
@@ -70,14 +74,6 @@ set listchars+=precedes:<         " The character to show in the first column wh
                                   " off and the line continues beyond the left of the screen
 " allow russian in commands
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
-
-" remove gui bells and whistles
-set guioptions-=m
-set guioptions-=T
-set guioptions-=R
-set guioptions-=r
-set guioptions-=L
-set guioptions-=l
 
 " NERDTree
 let NERDTreeShowFiles=1
@@ -111,10 +107,10 @@ let g:EasyMotion_leader_key = '<Leader>'
 " some good advices from nvie.com
 nnoremap ; :
 
-" find merge conflict markers
+" Find merge conflict markers
 nmap <silent> <leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
-" easier navigation between split windows
+" Easier navigation between split windows
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
