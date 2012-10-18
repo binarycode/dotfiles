@@ -139,3 +139,6 @@ set clipboard=unnamed
 
 " Disable folding
 set foldlevelstart=99
+
+nmap ,cs :let @*=expand("%")<CR>
+nmap ,cl :let @*=expand("%:p")<CR>
