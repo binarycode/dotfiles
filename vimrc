@@ -135,3 +135,9 @@ nnoremap td  :tabclose<CR>
 
 " Use smartindent for YAML
 autocmd FileType yaml setlocal smartindent
+
+" Copy/Paste in OSX
+set clipboard=unnamed
+
+" Disable folding
+set foldlevelstart=99
