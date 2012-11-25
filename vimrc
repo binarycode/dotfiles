@@ -38,8 +38,6 @@ set smarttab
 
 set number
 
-set cursorline
-
 " enable search highlighting and incremental search
 set hlsearch
 set incsearch
