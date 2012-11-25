@@ -79,6 +79,7 @@ let NERDTreeShowHidden=1
 nmap <silent> <c-b> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 let NERDTreeHighlightCursorline=1
+map <leader>r :NERDTreeFind<CR>
 
 " syntastic
 let g:syntastic_enable_signs=1
