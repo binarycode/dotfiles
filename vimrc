@@ -141,3 +141,6 @@ set foldlevelstart=99
 
 nmap ,cs :let @*=expand("%")<CR>
 nmap ,cl :let @*=expand("%:p")<CR>
+
+" Fugitive goodness
+nnoremap <leader>g :diffget<cr>
