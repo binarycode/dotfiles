@@ -116,6 +116,7 @@ nnoremap <c-l> <c-w>l
 " misc
 autocmd BufNewFile,BufRead *.thor set syntax=ruby
 au BufRead,BufNewFile *.rabl setf ruby
+au BufRead,BufNewFile *.pill setf ruby
 
 set so=999
 
