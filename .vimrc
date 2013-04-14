@@ -23,7 +23,6 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'bbommarito/vim-slim'
 Bundle 'mileszs/ack.vim'
 Bundle 'airblade/vim-rooter'
 
