@@ -25,6 +25,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'mileszs/ack.vim'
 Bundle 'airblade/vim-rooter'
+Bundle 'jistr/vim-nerdtree-tabs'
 
 filetype plugin indent on " Enable loading plugin and indent files for specific file types
 syntax on " Syntax highlight
