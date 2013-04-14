@@ -1,0 +1,8 @@
+--type-set=haml=.haml
+--type-set=html=.html
+--type-set=coffee=.coffee
+--type-set=js=.js
+--type-set=sass=.sass
+--type-set=scss=.scss
+--all
+--smart-case
