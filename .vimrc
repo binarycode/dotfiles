@@ -144,3 +144,6 @@ nmap ,cl :let @*=expand("%:p")<CR>
 
 " Fugitive goodness
 nnoremap <leader>g :diffget<cr>
+
+" Use ag instead of ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
