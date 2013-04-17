@@ -26,6 +26,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'airblade/vim-rooter'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'tpope/vim-dispatch'
 
 filetype plugin indent on " Enable loading plugin and indent files for specific file types
 syntax on " Syntax highlight
