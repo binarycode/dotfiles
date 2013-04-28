@@ -1,3 +1,4 @@
 *.swp
 vendor/ruby
 .rbenv-version
+.ruby-version
