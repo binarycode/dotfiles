@@ -145,3 +145,6 @@ nnoremap <leader>g :diffget<cr>
 
 " Use ag instead of ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Dispatch for rspec
+nnoremap <leader>m :Dispatch zeus rspec %<cr>
