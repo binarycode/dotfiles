@@ -27,7 +27,6 @@ Bundle 'airblade/vim-rooter'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-dispatch'
-Bundle "myusuf3/numbers.vim"
 
 filetype plugin indent on " Enable loading plugin and indent files for specific file types
 syntax on " Syntax highlight
@@ -149,6 +148,3 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Dispatch for rspec
 nnoremap <leader>m :Dispatch zeus rspec %<cr>
-
-" Toggle relative/absolute line numbering
-nnoremap <C-n> :call NumberToggle()<cr>
