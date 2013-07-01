@@ -12,6 +12,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
+Bundle 'ervandew/supertab'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-haml'
@@ -25,7 +26,6 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'mileszs/ack.vim'
 Bundle 'airblade/vim-rooter'
 Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-dispatch'
 
 filetype plugin indent on " Enable loading plugin and indent files for specific file types
@@ -56,6 +56,10 @@ colo molokai
 
 " disable auto-comment feature
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" autocomplete
+set ofu=syntaxcomplete#Complete
+set completeopt=longest
 
 " show special symbols
 " List chars
