@@ -27,6 +27,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'airblade/vim-rooter'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'tpope/vim-dispatch'
+Bundle 'thoughtbot/vim-rspec'
 
 filetype plugin indent on " Enable loading plugin and indent files for specific file types
 syntax on " Syntax highlight
@@ -151,4 +152,9 @@ nnoremap <leader>g :diffget<cr>
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Dispatch for rspec
-nnoremap <leader>m :Dispatch zeus rspec %<cr>
+let g:rspec_command = "Dispatch zeus rspec {spec}"
+
+" Rspec.vim mapping
+map <Leader>p :call RunCurrentSpecFile()<CR>
+map <Leader>m :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
