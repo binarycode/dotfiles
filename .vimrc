@@ -28,6 +28,7 @@ Bundle 'airblade/vim-rooter'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'tpope/vim-dispatch'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'sjl/gundo.vim'
 
 filetype plugin indent on " Enable loading plugin and indent files for specific file types
 syntax on " Syntax highlight
