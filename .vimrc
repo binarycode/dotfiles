@@ -12,7 +12,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'ervandew/supertab'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-haml'
@@ -29,6 +28,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'tpope/vim-dispatch'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'sjl/gundo.vim'
+Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on " Enable loading plugin and indent files for specific file types
 syntax on " Syntax highlight
