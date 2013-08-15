@@ -155,3 +155,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 " quickly run specs
 map <Leader>p :Rrunner<cr>
 map <Leader>m :.Rrunner<cr>
+
+" scrolling
+map J <PageDown>
+map K <PageUp>
