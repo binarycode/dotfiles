@@ -29,6 +29,7 @@ Bundle 'tpope/vim-dispatch'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'sjl/gundo.vim'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'slim-template/vim-slim'
 
 filetype plugin indent on " Enable loading plugin and indent files for specific file types
 syntax on " Syntax highlight
@@ -159,3 +160,6 @@ map <Leader>m :.Rrunner<cr>
 " scrolling
 map J <PageDown>
 map K <PageUp>
+
+" User airline for tabs also
+let g:airline#extensions#tabline#enabled = 1
