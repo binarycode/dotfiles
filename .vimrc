@@ -81,6 +81,7 @@ let NERDTreeShowHidden=1
 nmap <silent> <c-b> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 let NERDTreeHighlightCursorline=1
+let g:NERDTreeDirArrows=0
 map <leader>r :NERDTreeFind<CR>
 
 " syntastic
@@ -163,3 +164,5 @@ map K <PageUp>
 
 " User airline for tabs also
 let g:airline#extensions#tabline#enabled = 1
+" Fix airline sluggishness
+set fillchars=diff:·
