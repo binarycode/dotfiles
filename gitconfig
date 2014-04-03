@@ -1,0 +1,25 @@
+[user]
+        name = Igor Sidorov
+        email = igor.sidorov@onapp.com
+[color]
+        ui = true
+[core]
+        excludesfile = ~/.gitignore_global
+        editor = /usr/bin/vim
+[alias]
+        co = checkout
+        ci = commit
+        st = status -sb
+        br = branch
+        type = cat-file -t
+        dump = cat-file -p
+        ls = log --pretty=format:"%C(red)%h\\ %C(green)%ad\\ %C(reset)%s%C(blue)\\ [%cn]%C(yellow)%d" --decorate --date=short
+        ll = log --pretty=format:"%C(red)%h\\ %C(green)%ad\\ %C(reset)%s%C(blue)\\ [%cn]%C(yellow)%d" --decorate --date=short --numstat
+        diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+        la = "!git config -l | grep alias | cut -c 7-"
+        sl = stash list
+        ss = stash save
+[help]
+        autocorrect = 1
+[push]
+        default = matching
