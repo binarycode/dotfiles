@@ -90,6 +90,7 @@ let g:syntastic_enable_signs=1
 " ctrlp
 let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_custom_ignore = { 'dir': '\.git$\|tmp$\|public$\|vendor$\|\.bundle$' }
+let g:ctrlp_map = '<c-o>'
 
 " I type W instead of w all the time
 command! -bang Q q<bang>
@@ -177,6 +178,3 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
-
-" Search for identifier
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
