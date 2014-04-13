@@ -141,7 +141,11 @@ nnoremap td  :tabclose<CR>
 autocmd FileType yaml setlocal smartindent
 
 " Copy/Paste in OSX
-set clipboard=unnamed
+if has('unnamedplus')
+  set clipboard=unnamedplus
+elseif has('unnamed')
+  set clipboard=unnamed
+endif
 
 " Disable folding
 set foldlevelstart=99
