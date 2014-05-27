@@ -28,8 +28,10 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'tpope/vim-dispatch'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'sjl/gundo.vim'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'slim-template/vim-slim'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'ntpeters/vim-better-whitespace'
+Bundle 'ervandew/supertab'
 
 filetype plugin indent on " Enable loading plugin and indent files for specific file types
 syntax on " Syntax highlight
@@ -63,17 +65,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " autocomplete
 set ofu=syntaxcomplete#Complete
 set completeopt=longest
-
-" show special symbols
-" List chars
-set list
-set listchars=""                  " Reset the listchars
-set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
-set listchars+=trail:.            " show trailing spaces as dots
-set listchars+=extends:>          " The character to show in the last column when wrap is
-                                  " off and the line continues beyond the right of the screen
-set listchars+=precedes:<         " The character to show in the first column when wrap is
-                                  " off and the line continues beyond the left of the screen
 
 " NERDTree
 let NERDTreeShowFiles=1
