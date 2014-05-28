@@ -25,7 +25,6 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'sjl/gundo.vim'
 Plugin 'slim-template/vim-slim'
-Plugin 'ntpeters/vim-better-whitespace'
 
 " Supertab - autocompletion
 Plugin 'ervandew/supertab'
@@ -37,6 +36,8 @@ source ~/.vim/config/molokai.vim
 
 filetype plugin indent on
 " END VUNDLE
+
+source ~/.vim/config/whitespace.vim
 
 " Identation
 set expandtab
