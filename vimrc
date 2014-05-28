@@ -1,6 +1,3 @@
-" Do not be compatible with ancient vi
-set nocompatible
-
 " Vundle
 filetype off
 set rtp+=~/.vim/bundle/vundle/
