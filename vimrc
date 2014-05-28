@@ -54,14 +54,11 @@ nnoremap <esc> :noh<return><esc>
 " enable modeline
 set modeline
 
+source ~/.vim/config/supertab.vim
 source ~/.vim/config/molokai.vim
 
 " disable auto-comment feature
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" autocomplete
-set ofu=syntaxcomplete#Complete
-set completeopt=longest
 
 " NERDTree
 let NERDTreeShowFiles=1
