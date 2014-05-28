@@ -31,6 +31,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'ervandew/supertab'
 Bundle 'ntpeters/vim-better-whitespace'
+Bundle 'tomasr/molokai'
 
 filetype plugin indent on " Enable loading plugin and indent files for specific file types
 syntax on " Syntax highlight
@@ -53,10 +54,7 @@ nnoremap <esc> :noh<return><esc>
 " enable modeline
 set modeline
 
-" colorscheme
-set t_Co=256
-let g:molokai_original=1
-colo molokai
+source ~/.vim/config/molokai.vim
 
 " disable auto-comment feature
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
