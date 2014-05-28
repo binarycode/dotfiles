@@ -1,37 +1,42 @@
-" Vundle
+" VUNDLE
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" Dependencies
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'Raimondi/delimitMate'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'bling/vim-airline'
-Bundle 'mileszs/ack.vim'
-Bundle 'airblade/vim-rooter'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'tpope/vim-dispatch'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'sjl/gundo.vim'
-Bundle 'slim-template/vim-slim'
-Bundle 'ervandew/supertab'
-Bundle 'ntpeters/vim-better-whitespace'
-Bundle 'tomasr/molokai'
+Plugin 'gmarik/vundle'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'Raimondi/delimitMate'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'bling/vim-airline'
+Plugin 'mileszs/ack.vim'
+Plugin 'airblade/vim-rooter'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'tpope/vim-dispatch'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'sjl/gundo.vim'
+Plugin 'slim-template/vim-slim'
+Plugin 'ntpeters/vim-better-whitespace'
 
-filetype plugin indent on " Enable loading plugin and indent files for specific file types
-syntax on " Syntax highlight
+" Supertab - autocompletion
+Plugin 'ervandew/supertab'
+source ~/.vim/config/supertab.vim
+
+" Molokai - colorscheme
+Plugin 'tomasr/molokai'
+source ~/.vim/config/molokai.vim
+
+filetype plugin indent on
+" END VUNDLE
 
 " Identation
 set expandtab
@@ -50,9 +55,6 @@ nnoremap <esc> :noh<return><esc>
 
 " enable modeline
 set modeline
-
-source ~/.vim/config/supertab.vim
-source ~/.vim/config/molokai.vim
 
 " disable auto-comment feature
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
