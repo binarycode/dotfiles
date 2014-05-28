@@ -29,9 +29,8 @@ Bundle 'tpope/vim-dispatch'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'sjl/gundo.vim'
 Bundle 'slim-template/vim-slim'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'ervandew/supertab'
+Bundle 'ntpeters/vim-better-whitespace'
 
 filetype plugin indent on " Enable loading plugin and indent files for specific file types
 syntax on " Syntax highlight
