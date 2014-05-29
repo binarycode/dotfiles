@@ -4,27 +4,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Plugin 'gmarik/vundle'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'Raimondi/delimitMate'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'bling/vim-airline'
-Plugin 'mileszs/ack.vim'
-Plugin 'airblade/vim-rooter'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'tpope/vim-dispatch'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'sjl/gundo.vim'
-Plugin 'slim-template/vim-slim'
 
 " Supertab - autocompletion
 Plugin 'ervandew/supertab'
@@ -34,136 +13,105 @@ source ~/.vim/config/supertab.vim
 Plugin 'tomasr/molokai'
 source ~/.vim/config/molokai.vim
 
+" NERDTree - file explorer
+Plugin 'scrooloose/nerdtree'
+source ~/.vim/config/nerdtree.vim
+
+" Simplify working with tabs and NERDTree
+Plugin 'jistr/vim-nerdtree-tabs'
+
+" easy commenting
+Plugin 'scrooloose/nerdcommenter'
+
+" Syntastic - syntax checking
+Plugin 'scrooloose/syntastic'
+
+" CtrlP - easy file navigation
+Plugin 'kien/ctrlp.vim'
+source ~/.vim/config/ctrlp.vim
+
+" EasyMotion - navigation within page
+Plugin 'Lokaltog/vim-easymotion'
+source ~/.vim/config/easymotion.vim
+
+" Fugitive - git wrapper
+Plugin 'tpope/vim-fugitive'
+
+" Ag wrapper
+Plugin 'rking/ag.vim'
+
+" Airline - fancy status/tabline
+Plugin 'bling/vim-airline'
+source ~/.vim/config/airline.vim
+
+" Automatically end certain structures (like if, def etc)
+Plugin 'tpope/vim-endwise'
+
+" ruby support
+Plugin 'vim-ruby/vim-ruby'
+
+" Haml and Sass support
+Plugin 'tpope/vim-haml'
+
+" CoffeeScript support
+Plugin 'kchmck/vim-coffee-script'
+
+" A lot of useful rails stuff
+Plugin 'tpope/vim-rails'
+
+" Easy brackets management
+Plugin 'tpope/vim-surround'
+
+" Useful mappings
+Plugin 'tpope/vim-unimpaired'
+
+" Automatic closing of quotes, brackets etc
+Plugin 'Raimondi/delimitMate'
+
+" Change working dir to project root when file is opened
+Plugin 'airblade/vim-rooter'
+
+" asynchronous build and test dispatcher
+Plugin 'tpope/vim-dispatch'
+
 filetype plugin indent on
 " END VUNDLE
 
-source ~/.vim/config/whitespace.vim
-
-" Identation
+" replace tabs with spaces
 set expandtab
+
+" number of spaces for each indent step
 set shiftwidth=2
+
+" tab size for editing operations (like <Tab> and <BS>)
 set softtabstop=2
+
+" editing operations use softtabstop value
 set smarttab
 
+" show line numbers
 set number
 
-" enable search highlighting and incremental search
+" highlight all search matches
 set hlsearch
-set incsearch
 
-" Hide search highlight on escape
-nnoremap <esc> :noh<return><esc>
+" incremental search
+set incsearch
 
 " enable modeline
 set modeline
 
-" disable auto-comment feature
+" disable auto comment insertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" NERDTree
-let NERDTreeShowFiles=1
-let NERDTreeShowHidden=1
-nmap <silent> <c-b> :NERDTreeToggle<CR>
-let NERDTreeQuitOnOpen=1
-let NERDTreeHighlightCursorline=1
-let g:NERDTreeDirArrows=0
-map <leader>r :NERDTreeFind<CR>
-
-" syntastic
-let g:syntastic_enable_signs=1
-
-" ctrlp
-let g:ctrlp_working_path_mode = 'rc'
-let g:ctrlp_custom_ignore = { 'dir': '\.git$\|tmp$\|public$\|vendor$\|\.bundle$' }
-let g:ctrlp_map = '<c-o>'
-
-" I type W instead of w all the time
-command! -bang Q q<bang>
-command! -bang W w<bang>
-
-" Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
-" those pesky backups
-set nobackup
-set noswapfile
-
-" EasyMotion
-let g:EasyMotion_leader_key = '<Leader>'
-
-" some good advices from nvie.com
-nnoremap ; :
-
-" Find merge conflict markers
-nmap <silent> <leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
-
-" Easier navigation between split windows
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-
-" misc
-autocmd BufNewFile,BufRead *.thor set syntax=ruby
-au BufRead,BufNewFile *.rabl setf ruby
-au BufRead,BufNewFile *.pill setf ruby
-
+" cursor line is always at screen center
 set so=999
 
-" Statusline should be always visible
+" statusline always visible
 set laststatus=2
 
-" Tab navigation
-nnoremap th  :tabfirst<CR>
-nnoremap tk  :tabnext<CR>
-nnoremap tj  :tabprev<CR>
-nnoremap tl  :tablast<CR>
-nnoremap tn  :tabnew<CR>
-nnoremap td  :tabclose<CR>
+" highlight trailing whitespace
+source ~/.vim/config/whitespace.vim
 
-" Use smartindent for YAML
-autocmd FileType yaml setlocal smartindent
-
-" Copy/Paste in OSX
-if has('unnamedplus')
-  set clipboard=unnamedplus
-elseif has('unnamed')
-  set clipboard=unnamed
-endif
-
-" Disable folding
-set foldlevelstart=99
-
-nmap ,cs :let @*=expand("%")<CR>
-nmap ,cl :let @*=expand("%:p")<CR>
-
-" Fugitive goodness
-nnoremap <leader>g :diffget<cr>
-
-" Use ag instead of ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
-" quickly run specs
-map <Leader>p :Rrunner<cr>
-map <Leader>m :.Rrunner<cr>
-
-" scrolling
-map J <PageDown>
-map K <PageUp>
-
-" User airline for tabs also
-let g:airline#extensions#tabline#enabled = 1
-" Fix airline sluggishness
-set fillchars=diff:·
-
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
+" key mappings
+source ~/.vim/config/mapping.vim
