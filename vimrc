@@ -77,6 +77,9 @@ Plugin 'tpope/vim-dispatch'
 filetype plugin indent on
 " END VUNDLE
 
+" enable syntax highlighting
+syntax on
+
 " replace tabs with spaces
 set expandtab
 
