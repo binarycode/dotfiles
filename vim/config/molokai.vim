@@ -1,1 +1,1 @@
-colo molokai
+silent! colorscheme molokai
