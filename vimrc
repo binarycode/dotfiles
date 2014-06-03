@@ -74,6 +74,10 @@ Plugin 'airblade/vim-rooter'
 " asynchronous build and test dispatcher
 Plugin 'tpope/vim-dispatch'
 
+" Simplify aligning text
+Plugin 'godlygeek/tabular'
+source ~/.vim/config/tabular.vim
+
 filetype plugin indent on
 " END VUNDLE
 
