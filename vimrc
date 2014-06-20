@@ -117,6 +117,9 @@ set so=999
 " statusline always visible
 set laststatus=2
 
+" allow backspacing over a lot of things
+set backspace=indent,eol,start
+
 " highlight trailing whitespace
 source ~/.vim/config/whitespace.vim
 
