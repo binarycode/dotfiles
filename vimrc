@@ -7,7 +7,6 @@ Plugin 'gmarik/vundle'
 
 " Supertab - autocompletion
 Plugin 'ervandew/supertab'
-source ~/.vim/config/supertab.vim
 
 " Molokai - colorscheme
 Plugin 'tomasr/molokai'
