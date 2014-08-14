@@ -11,4 +11,4 @@ let NERDTreeDirArrows=0
 nmap <silent> <c-b> :NERDTreeToggle<CR>
 
 " open explorer with current file via <Leader>r
-map <leader>r :NERDTreeFind<CR>
+map <Leader>r :NERDTreeFind<CR>

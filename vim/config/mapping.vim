@@ -37,9 +37,6 @@ map <Leader>m :.Rrunner<cr>
 map J <PageDown>
 map K <PageUp>
 
-" launch ctrl-p
-nnoremap <Leader>o :CtrlP<CR>
-
 " save file
 nnoremap <Leader>w :w<CR>
 

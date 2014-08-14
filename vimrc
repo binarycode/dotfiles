@@ -1,3 +1,6 @@
+" key mappings
+source ~/.vim/config/mapping.vim
+
 " VUNDLE
 filetype off
 set rtp+=~/.vim/bundle/vundle/
@@ -79,6 +82,7 @@ source ~/.vim/config/tabular.vim
 
 " Simplify selecting text
 Plugin 'terryma/vim-expand-region'
+source ~/.vim/config/expand-region.vim
 
 filetype plugin indent on
 " END VUNDLE
@@ -124,6 +128,3 @@ set backspace=indent,eol,start
 
 " highlight trailing whitespace
 source ~/.vim/config/whitespace.vim
-
-" key mappings
-source ~/.vim/config/mapping.vim
