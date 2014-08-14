@@ -77,6 +77,9 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'godlygeek/tabular'
 source ~/.vim/config/tabular.vim
 
+" Simplify selecting text
+Plugin 'terryma/vim-expand-region'
+
 filetype plugin indent on
 " END VUNDLE
 
