@@ -1,3 +1,6 @@
+" use spacebar as leader key
+let mapleader = "\<Space>"
+
 " hide search highlight on escape
 nnoremap <esc> :noh<return><esc>
 
@@ -33,3 +36,15 @@ map <Leader>m :.Rrunner<cr>
 " quick page scrolling
 map J <PageDown>
 map K <PageUp>
+
+" launch ctrl-p
+nnoremap <Leader>o :CtrlP<CR>
+
+" save file
+nnoremap <Leader>w :w<CR>
+
+" close file
+nnoremap <Leader>q :q<CR>
+
+" visual line mode
+nmap <Leader><Leader> V
