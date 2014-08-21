@@ -32,6 +32,10 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 source ~/.vim/config/ctrlp.vim
 
+" Extension for CtrlP that allows to execute arbitrary commands
+Plugin 'mattn/ctrlp-launcher'
+source ~/.vim/config/ctrlp-launcher.vim
+
 " EasyMotion - navigation within page
 Plugin 'Lokaltog/vim-easymotion'
 source ~/.vim/config/easymotion.vim

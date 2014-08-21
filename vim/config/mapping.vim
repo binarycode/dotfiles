@@ -42,3 +42,6 @@ nnoremap <Leader><Leader>q :q<CR>
 
 " save file
 nnoremap <Leader><Leader>w :w<CR>
+
+" CtrlP launcher
+nnoremap <Leader><Leader>m :<c-u>CtrlPLauncher<cr>
