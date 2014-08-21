@@ -37,11 +37,8 @@ map <Leader>m :.Rrunner<cr>
 map J <PageDown>
 map K <PageUp>
 
-" save file
-nnoremap <Leader>w :w<CR>
-
 " close file
-nnoremap <Leader>q :q<CR>
+nnoremap <Leader><Leader>q :q<CR>
 
-" visual line mode
-nmap <Leader><Leader> V
+" save file
+nnoremap <Leader><Leader>w :w<CR>
