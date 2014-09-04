@@ -37,8 +37,14 @@ map <Leader>m :.Rrunner<cr>
 map J <PageDown>
 map K <PageUp>
 
+" discard changes close file
+nnoremap <Leader><Leader>qq :q!<CR>
+
 " close file
 nnoremap <Leader><Leader>q :q<CR>
+
+" save and close file
+nnoremap <Leader><Leader>wq :w<CR>
 
 " save file
 nnoremap <Leader><Leader>w :w<CR>
