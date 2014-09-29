@@ -3,10 +3,10 @@ source ~/.vim/config/mapping.vim
 
 " VUNDLE
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " Supertab - autocompletion
 Plugin 'ervandew/supertab'
@@ -35,6 +35,9 @@ source ~/.vim/config/ctrlp.vim
 " Extension for CtrlP that allows to execute arbitrary commands
 Plugin 'mattn/ctrlp-launcher'
 source ~/.vim/config/ctrlp-launcher.vim
+
+" Quicker matching for CtrlP
+Plugin 'FelikZ/ctrlp-py-matcher'
 
 " EasyMotion - navigation within page
 Plugin 'Lokaltog/vim-easymotion'
