@@ -1,3 +1,5 @@
 Git Diff	:Git diff
 Git Cached	:Git diff --cached
 Git Status	:Gstatus
+Tab Equals	:Tabularize /=
+Tab Colon	:Tabularize /:\zs
