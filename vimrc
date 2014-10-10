@@ -91,6 +91,9 @@ source ~/.vim/config/tabular.vim
 Plugin 'terryma/vim-expand-region'
 source ~/.vim/config/expand-region.vim
 
+" Show recent files on start screen
+Plugin 'mhinz/vim-startify'
+
 filetype plugin indent on
 " END VUNDLE
 
