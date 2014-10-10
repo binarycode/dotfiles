@@ -85,7 +85,6 @@ Plugin 'tpope/vim-dispatch'
 
 " Simplify aligning text
 Plugin 'godlygeek/tabular'
-source ~/.vim/config/tabular.vim
 
 " Simplify selecting text
 Plugin 'terryma/vim-expand-region'
