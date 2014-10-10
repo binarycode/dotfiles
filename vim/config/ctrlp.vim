@@ -24,7 +24,4 @@ endif
 " could be useful for large projects
 let g:ctrlp_max_files = 0
 
-" delay to prevent extra search
-let g:ctrlp_lazy_update = 100
-
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
