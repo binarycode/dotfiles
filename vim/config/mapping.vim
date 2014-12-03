@@ -51,3 +51,7 @@ nnoremap <Leader><Leader>w :w<CR>
 
 " CtrlP launcher
 nnoremap <Leader><Leader>m :<c-u>CtrlPLauncher<cr>
+
+" Copy current path to buffer
+nmap ,cs :let @*=expand("%")<CR>
+nmap ,cl :let @*=expand("%:p")<CR>
