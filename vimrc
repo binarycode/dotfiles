@@ -134,3 +134,6 @@ set backspace=indent,eol,start
 
 " highlight trailing whitespace
 source ~/.vim/config/whitespace.vim
+
+" enable os clipboard
+set clipboard=unnamed
