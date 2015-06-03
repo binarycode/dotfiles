@@ -2,7 +2,7 @@
 let g:ctrlp_working_path_mode = 'rc'
 
 " ignore unimportant files
-let g:ctrlp_custom_ignore = { 'dir': '\.git$\|tmp$\|public$\|vendor$\|\.bundle$' }
+let g:ctrlp_custom_ignore = { 'dir': '\.git$\|tmp$\|public$\|vendor$\|\.bundle$\|\.gems$' }
 
 " start CtrlP via <Leader>o
 let g:ctrlp_map = '<Leader>o'
