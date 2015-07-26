@@ -1,5 +1,5 @@
-" set local working directory to 1) repo root path 2) current file
-let g:ctrlp_working_path_mode = 'rc'
+" do not set local working directory, rely on the global one
+let g:ctrlp_working_path_mode = ''
 
 " ignore unimportant files
 let g:ctrlp_custom_ignore = { 'dir': '\.git$\|tmp$\|public$\|vendor$\|\.bundle$\|\.gems$' }
