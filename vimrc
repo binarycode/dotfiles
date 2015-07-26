@@ -79,6 +79,7 @@ Plugin 'Raimondi/delimitMate'
 
 " Change working dir to project root when file is opened
 Plugin 'airblade/vim-rooter'
+source ~/.vim/config/rooter.vim
 
 " asynchronous build and test dispatcher
 Plugin 'tpope/vim-dispatch'
