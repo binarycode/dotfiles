@@ -91,6 +91,9 @@ Plugin 'godlygeek/tabular'
 Plugin 'terryma/vim-expand-region'
 source ~/.vim/config/expand-region.vim
 
+" Eco templates syntax
+Plugin 'AndrewRadev/vim-eco'
+
 filetype plugin indent on
 " END VUNDLE
 
