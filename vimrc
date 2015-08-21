@@ -94,6 +94,9 @@ source ~/.vim/config/expand-region.vim
 " Eco templates syntax
 Plugin 'AndrewRadev/vim-eco'
 
+" Slim templates syntax
+Plugin 'slim-template/vim-slim'
+
 filetype plugin indent on
 " END VUNDLE
 
