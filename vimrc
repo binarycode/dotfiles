@@ -143,4 +143,8 @@ set backspace=indent,eol,start
 source ~/.vim/config/whitespace.vim
 
 " enable os clipboard
-set clipboard=unnamed
+if has('unnamedplus')
+  set clipboard=unnamedplus
+else
+  set clipboard=unnamed
+endif
