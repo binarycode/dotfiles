@@ -97,6 +97,9 @@ Plugin 'AndrewRadev/vim-eco'
 " Slim templates syntax
 Plugin 'slim-template/vim-slim'
 
+" Automatic sync with remote path
+Plugin 'eshion/vim-sync'
+
 filetype plugin indent on
 " END VUNDLE
 

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+REMOTE_HOST="root@host"
+REMOTE_PATH="example_path"
+
+case "$1" in
+  upload)
+    rsync -azcuvR $3 $REMOTE_HOST:$REMOTE_PATH
+    ;;
+  download)
+    rsync -azcuvR $REMOTE_HOST:$REMOTE_PATH/$3 .
+    ;;
+esac
