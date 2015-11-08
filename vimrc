@@ -27,6 +27,7 @@ Plugin 'scrooloose/nerdcommenter'
 
 " Syntastic - syntax checking
 Plugin 'scrooloose/syntastic'
+source ~/.vim/config/syntastic.vim
 
 " CtrlP - easy file navigation
 Plugin 'kien/ctrlp.vim'
