@@ -152,3 +152,6 @@ if has('unnamedplus')
 else
   set clipboard=unnamed
 endif
+
+" make vim work correctly with watch/livereload tools
+set backupcopy=yes
