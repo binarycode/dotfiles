@@ -101,6 +101,15 @@ Plugin 'slim-template/vim-slim'
 " Automatic sync with remote path
 Plugin 'eshion/vim-sync'
 
+" Better JS support
+Plugin 'pangloss/vim-javascript'
+
+" JSX support
+Plugin 'mxw/vim-jsx'
+
+" ES2015 support
+Plugin 'isRuslan/vim-es6'
+
 filetype plugin indent on
 " END VUNDLE
 
