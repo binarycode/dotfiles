@@ -15,12 +15,11 @@ Plugin 'ervandew/supertab'
 Plugin 'tomasr/molokai'
 source ~/.vim/config/molokai.vim
 
-" NERDTree - file explorer
-Plugin 'scrooloose/nerdtree'
-source ~/.vim/config/nerdtree.vim
+" path navigator
+Plugin 'jeetsukumaran/vim-filebeagle'
 
-" Simplify working with tabs and NERDTree
-Plugin 'jistr/vim-nerdtree-tabs'
+" shell commands
+Plugin 'tpope/vim-eunuch'
 
 " easy commenting
 Plugin 'scrooloose/nerdcommenter'
