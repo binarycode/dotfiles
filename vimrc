@@ -164,3 +164,7 @@ endif
 
 " make vim work correctly with watch/livereload tools
 set backupcopy=yes
+
+set backupdir=/tmp//
+set directory=/tmp//
+set backupdir=/tmp//
