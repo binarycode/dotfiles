@@ -86,7 +86,8 @@ source ~/.vim/config/rooter.vim
 Plugin 'tpope/vim-dispatch'
 
 " Simplify aligning text
-Plugin 'godlygeek/tabular'
+Plugin 'junegunn/vim-easy-align'
+source ~/.vim/config/easy-align.vim
 
 " Simplify selecting text
 Plugin 'terryma/vim-expand-region'
