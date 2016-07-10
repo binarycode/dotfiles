@@ -1,6 +1,13 @@
 #!/bin/sh
 
-if [ ! -e $HOME/.vim/bundle/Vundle.vim ]; then
-  git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+VUNDLE_PATH=$HOME/.vim/bundle/Vundle.vim
+if [ ! -e $VUNDLE_PATH]; then
+  git clone https://github.com/gmarik/Vundle.vim.git $VUNDLE_PATH
 fi
 vim +PluginInstall! +qa
+
+TPM_PATH=$HOME/.tmux/plugins/tpm
+if [ ! -e $TPM_PATH ]; then
+  mkdir -p $TPM_PATH
+  git clone https://github.com/tmux-plugins/tpm.git $TPM_PATH
+fi
