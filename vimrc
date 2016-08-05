@@ -110,6 +110,9 @@ Plugin 'mxw/vim-jsx'
 " ES2015 support
 Plugin 'isRuslan/vim-es6'
 
+" Ansible YAML syntax support
+Plugin 'pearofducks/ansible-vim'
+
 filetype plugin indent on
 " END VUNDLE
 
