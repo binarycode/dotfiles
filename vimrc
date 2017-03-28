@@ -171,3 +171,5 @@ set backupcopy=yes
 set backupdir=/tmp//
 set directory=/tmp//
 set backupdir=/tmp//
+
+set colorcolumn=80
