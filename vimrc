@@ -143,6 +143,12 @@ set incsearch
 " enable modeline
 set modeline
 
+" enable current line highligh
+set cursorline
+
+" redraw only when needed
+set lazyredraw
+
 " disable auto comment insertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
