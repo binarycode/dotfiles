@@ -55,3 +55,6 @@ nnoremap <Leader><Leader>m :<c-u>CtrlPLauncher<cr>
 " Copy current path to buffer
 nmap ,cs :let @*=expand("%")<CR>
 nmap ,cl :let @*=expand("%:p")<CR>
+
+" Close all windows and open Gstatus full-screen
+map <Leader>g :on <bar> :Ge :<CR>
