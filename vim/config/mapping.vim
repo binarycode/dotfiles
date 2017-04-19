@@ -28,10 +28,10 @@ nnoremap tn  :tabnew<CR>
 nnoremap td  :tabclose<CR>
 
 " <Leader>p to run whole spec file
-map <Leader>p :Rrunner<cr>
+map <Leader>p :Runner<cr>
 
 " <Leader>m to run spec under cursor
-map <Leader>m :.Rrunner<cr>
+map <Leader>m :.Runner<cr>
 
 " quick page scrolling
 map J <PageDown>
