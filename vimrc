@@ -29,7 +29,7 @@ Plugin 'scrooloose/syntastic'
 source ~/.vim/config/syntastic.vim
 
 " CtrlP - easy file navigation
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 source ~/.vim/config/ctrlp.vim
 
 " Extension for CtrlP that allows to execute arbitrary commands
