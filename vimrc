@@ -7,7 +7,7 @@ set nocompatible
 " VUNDLE
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
+call vundle#rc()
 
 Plugin 'gmarik/Vundle.vim'
 
@@ -115,7 +115,6 @@ Plugin 'isRuslan/vim-es6'
 " Ansible YAML syntax support
 Plugin 'pearofducks/ansible-vim'
 
-call vundle#end()
 filetype plugin indent on
 " END VUNDLE
 
