@@ -1,10 +1,13 @@
 " key mappings
 source ~/.vim/config/mapping.vim
 
+" be iMproved
+set nocompatible
+
 " VUNDLE
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
@@ -113,6 +116,7 @@ Plugin 'isRuslan/vim-es6'
 " Ansible YAML syntax support
 Plugin 'pearofducks/ansible-vim'
 
+call vundle#end()
 filetype plugin indent on
 " END VUNDLE
 
