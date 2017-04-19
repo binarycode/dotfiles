@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VUNDLE_PATH=$HOME/.vim/bundle/Vundle.vim
-if [ ! -e $VUNDLE_PATH]; then
+if [ ! -e $VUNDLE_PATH ]; then
   git clone https://github.com/gmarik/Vundle.vim.git $VUNDLE_PATH
 fi
 vim +PluginInstall! +qa
