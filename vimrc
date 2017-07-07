@@ -16,7 +16,6 @@ Plugin 'ervandew/supertab'
 
 " Molokai - colorscheme
 Plugin 'tomasr/molokai'
-source ~/.vim/config/molokai.vim
 
 " path navigator
 Plugin 'jeetsukumaran/vim-filebeagle'
@@ -119,6 +118,9 @@ Plugin 'pearofducks/ansible-vim'
 call vundle#end()
 filetype plugin indent on
 " END VUNDLE
+
+" apply colorscheme after vundle config
+source ~/.vim/config/molokai.vim
 
 " enable syntax highlighting
 syntax on
