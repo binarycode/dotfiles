@@ -19,6 +19,7 @@ Plugin 'tomasr/molokai'
 
 " path navigator
 Plugin 'jeetsukumaran/vim-filebeagle'
+source ~/.vim/config/filebeagle.vim
 
 " shell commands
 Plugin 'tpope/vim-eunuch'
@@ -98,7 +99,7 @@ source ~/.vim/config/expand-region.vim
 Plugin 'AndrewRadev/vim-eco'
 
 " Slim templates syntax
-Plugin 'slim-template/vim-slim'
+Plugin 'onemanstartup/vim-slim'
 
 " Automatic sync with remote path
 Plugin 'eshion/vim-sync'
@@ -114,6 +115,12 @@ Plugin 'isRuslan/vim-es6'
 
 " Ansible YAML syntax support
 Plugin 'pearofducks/ansible-vim'
+
+" HTML 5 support
+Plugin 'othree/html5.vim'
+
+" Modern markdown syntax plugin
+Plugin 'tpope/vim-markdown'
 
 filetype plugin indent on
 " END VUNDLE
