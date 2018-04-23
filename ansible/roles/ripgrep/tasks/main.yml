@@ -1,0 +1,5 @@
+---
+- name: Install ripgrep package.
+  pacman:
+    name:  ripgrep
+    state: present

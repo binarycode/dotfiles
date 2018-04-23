@@ -1,0 +1,5 @@
+---
+- name: Install the_silver_searcher package.
+  pacman:
+    name:  the_silver_searcher
+    state: present
