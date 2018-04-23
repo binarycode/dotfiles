@@ -1,0 +1,23 @@
+source {{ root }}/plugins.vim
+source {{ root }}/base.vim
+source {{ root }}/keys.vim
+
+" PLUGIN CUSTOMIZATION
+
+source {{ root }}/config/fzf.vim
+source {{ root }}/config/molokai.vim
+source {{ root }}/config/nvim-completion-manager.vim
+source {{ root }}/config/vim-easy-align.vim
+source {{ root }}/config/vim-easymotion.vim
+source {{ root }}/config/vim-filebeagle.vim
+source {{ root }}/config/vim-grepper.vim
+
+" ENVIRONMENTS
+
+source {{ root }}/env/git.vim
+{% if platformio %}
+source {{ root }}/env/platformio.vim
+{% endif %}
+{% if rails %}
+source {{ root }}/env/rails.vim
+{% endif %}

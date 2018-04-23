@@ -1,4 +1,4 @@
-" use spacebar as leader key
+" use spacebar as Leader
 let mapleader = "\<Space>"
 
 " hide search highlight on escape
@@ -9,6 +9,18 @@ command! -bang Q q<bang>
 
 " W to save
 command! -bang W w<bang>
+
+" discard changes close file
+nnoremap <Leader><Leader>qq :q!<CR>
+
+" close file
+nnoremap <Leader><Leader>q :q<CR>
+
+" save and close file
+nnoremap <Leader><Leader>wq :w<CR>
+
+" save file
+nnoremap <Leader><Leader>w :w<CR>
 
 " use ; as : in command mode
 nnoremap ; :
@@ -27,34 +39,10 @@ nnoremap tl  :tablast<CR>
 nnoremap tn  :tabnew<CR>
 nnoremap td  :tabclose<CR>
 
-" <Leader>p to run whole spec file
-map <Leader>p :Runner<cr>
-
-" <Leader>m to run spec under cursor
-map <Leader>m :.Runner<cr>
-
 " quick page scrolling
 map J <PageDown>
 map K <PageUp>
 
-" discard changes close file
-nnoremap <Leader><Leader>qq :q!<CR>
-
-" close file
-nnoremap <Leader><Leader>q :q<CR>
-
-" save and close file
-nnoremap <Leader><Leader>wq :w<CR>
-
-" save file
-nnoremap <Leader><Leader>w :w<CR>
-
-" CtrlP launcher
-nnoremap <Leader><Leader>m :<c-u>CtrlPLauncher<cr>
-
 " Copy current path to buffer
-nmap ,cs :let @*=expand("%")<CR>
-nmap ,cl :let @*=expand("%:p")<CR>
-
-" Close all windows and open Gstatus full-screen
-map <Leader>g :on <bar> :Ge :<CR>
+nmap ,cs :let @+=expand("%")<CR>
+nmap ,cl :let @+=expand("%:p")<CR>

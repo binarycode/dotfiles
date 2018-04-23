@@ -1,0 +1,20 @@
+if filereadable("platformio.ini")
+  " override syntastic options to point to correct tools
+  let s:idedata = json_decode(system('pio -f -c vim run -t idedata | grep "{.*}"'))
+
+  if empty(s:idedata)
+    echoerr 'Cannot parse idedata'
+  else
+    let g:syntastic_c_compiler = s:idedata["cc_path"]
+    let g:syntastic_c_compiler_options = s:idedata["cc_flags"]
+    let g:syntastic_c_include_dirs = s:idedata["includes"]
+    let g:syntastic_c_check_header = 1
+    let g:syntastic_c_auto_refresh_includes = 1
+
+    let g:syntastic_cpp_compiler = s:idedata["cxx_path"]
+    let g:syntastic_cpp_compiler_options = s:idedata["cxx_flags"]
+    let g:syntastic_cpp_include_dirs = s:idedata["includes"]
+    let g:syntastic_cpp_check_header = 1
+    let g:syntastic_cpp_auto_refresh_includes = 1
+  endif
+endif

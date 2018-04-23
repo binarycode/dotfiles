@@ -1,0 +1,17 @@
+---
+- include: template.yml
+  with_items:
+    - base.vim
+    - init.vim
+    - keys.vim
+    - plugins.vim
+
+    - config/fzf.vim
+    - config/molokai.vim
+    - config/nvim-completion-manager.vim
+    - config/vim-easy-align.vim
+    - config/vim-easymotion.vim
+    - config/vim-filebeagle.vim
+    - config/vim-grepper.vim
+
+    - env/git.vim

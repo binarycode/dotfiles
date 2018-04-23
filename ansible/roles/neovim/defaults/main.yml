@@ -1,0 +1,6 @@
+---
+golang:     false
+platformio: false
+rails:      false
+
+root: ~/.config/nvim

@@ -1,0 +1,4 @@
+---
+- include: template.yml
+  with_items:
+    - env/rails.vim

@@ -1,0 +1,5 @@
+---
+- command: go get -u github.com/nsf/gocode
+- include: template.yml
+  with_items:
+    - ftplugin/go.vim

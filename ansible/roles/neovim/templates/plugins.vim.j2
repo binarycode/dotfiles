@@ -1,0 +1,68 @@
+call plug#begin('{{ root }}/bundle')
+
+" colorscheme
+Plug 'tomasr/molokai'
+
+" autocompletion
+Plug 'roxma/nvim-completion-manager'
+
+" path navigator
+Plug 'jeetsukumaran/vim-filebeagle'
+
+" shell commands (move, delete, rename etc)
+Plug 'tpope/vim-eunuch'
+
+" easy commenting
+Plug 'scrooloose/nerdcommenter'
+
+" linting
+Plug 'vim-syntastic/syntastic'
+
+" fuzzy search
+Plug 'junegunn/fzf'
+
+" page navigation
+Plug 'easymotion/vim-easymotion'
+
+" git
+Plug 'tpope/vim-fugitive'
+
+" automatically end certain structures (like if, def etc)
+Plug 'tpope/vim-endwise'
+
+" easy brackets management
+Plug 'tpope/vim-surround'
+
+" useful mappings
+Plug 'tpope/vim-unimpaired'
+
+" search
+Plug 'mhinz/vim-grepper'
+
+" status line stuff
+Plug 'itchyny/lightline.vim'
+
+" simplify aligning text
+Plug 'junegunn/vim-easy-align'
+
+{% if golang %}
+" Golang support for NCM
+Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '{{ root }}/bundle/gocode/nvim/symlink.sh' }
+{% endif %}
+
+{% if platformio %}
+" C/C++ support for NCM
+Plug 'roxma/ncm-clang'
+{% endif %}
+
+{% if rails %}
+" rails integration
+Plug 'tpope/vim-rails'
+
+" slim templating syntax
+Plug 'slim-template/vim-slim'
+
+" coffeescript syntax support
+Plug 'kchmck/vim-coffee-script'
+{% endif %}
+call plug#end()
