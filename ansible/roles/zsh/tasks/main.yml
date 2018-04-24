@@ -1,0 +1,15 @@
+---
+- name: Install zsh package.
+  pacman:
+    name:  zsh
+    state: present
+
+- name: Install geometry theme.
+  git:
+    repo: https://github.com/geometry-zsh/geometry
+    dest: '{{ root }}/.zsh/geometry'
+
+- name: Install zsh config.
+  template:
+    src:  zshrc.j2
+    dest: '{{ root }}/.zshrc'
