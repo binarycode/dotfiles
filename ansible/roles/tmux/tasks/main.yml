@@ -1,0 +1,30 @@
+---
+- name: Install tmux package.
+  pacman:
+    name:  tmux
+    state: present
+
+- name: Install xsel package (required for tmux-yank plugin).
+  pacman:
+    name:  xsel
+    state: present
+
+- name: Install tpm.
+  git:
+    repo: https://github.com/tmux-plugins/tpm.git
+    dest: '{{ root }}/plugins/tpm'
+
+- name:    Install plugins.
+  command: '{{ root }}/plugins/tpm/bin/install_plugins'
+  environment:
+    TPM_PLUGIN_MANAGER_PATH: '{{ root }}/.tmux/plugins'
+
+- name: Update plugins.
+  command: '{{ root }}/plugins/tpm/bin/update_plugins all'
+  environment:
+    TPM_PLUGIN_MANAGER_PATH: '{{ root }}/.tmux/plugins'
+
+- name: Clean unused plugins.
+  command: '{{ root }}/plugins/tpm/bin/clean_plugins'
+  environment:
+    TPM_PLUGIN_MANAGER_PATH: '{{ root }}/.tmux/plugins'

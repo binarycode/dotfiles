@@ -36,9 +36,10 @@ set -g renumber-windows on
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-pain-control'
+set -g @plugin 'tmux-plugins/tmux-yank'
 
 # Initialize TPM
-run '~/.tmux/plugins/tpm/tpm'
+run '{{ root }}/plugins/tpm/tpm'
 
 # cycling between windows
 bind -r C-j select-window -t :-
