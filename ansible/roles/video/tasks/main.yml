@@ -1,0 +1,13 @@
+---
+- name: Install hardware video accelation driver.
+  pacman:
+    name:  '{{ hardware_video_acceleration_driver }}'
+    state: present
+
+- name: Install packages.
+  pacman:
+    name:  '{{ item }}'
+    state: present
+  with_items:
+    - youtube-dl
+    - mpv
