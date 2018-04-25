@@ -3,6 +3,7 @@
   pacman:
     name:  git
     state: present
+  become: yes
 
 - name: Install global configs.
   template:

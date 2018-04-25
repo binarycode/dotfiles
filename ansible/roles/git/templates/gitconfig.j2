@@ -4,7 +4,7 @@
 [color]
         ui = true
 [core]
-        excludesfile = ~/.gitignore_global
+        excludesfile = {{ ansible_env.HOME }}/.gitignore_global
         editor = /usr/bin/nvim
 [alias]
         co = checkout

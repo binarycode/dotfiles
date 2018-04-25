@@ -3,6 +3,18 @@
   pacman:
     name:  neovim
     state: present
+  become: yes
+
+- name: Create neovim config folders.
+  file:
+    path:  '{{ ansible_env.HOME }}/.config/nvim/{{ item }}'
+    state: directory
+  with_items:
+    - autoload
+    - bundle
+    - config
+    - env
+    - ftplugin
 
 - include: config/main.yml
 
@@ -18,7 +30,18 @@
 - name: Install vim-plug.
   get_url:
     url:  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    dest: '{{ root }}/autoload/plug.vim'
+    dest: '{{ ansible_env.HOME }}/.config/nvim/autoload/plug.vim'
+
+- name: Install neovim pip package.
+  pip:
+    name: neovim
+  become: yes
+
+- name:    Update vim-plug.
+  command: nvim +PlugUpgrade +qall!
+
+- name:    Install plugins.
+  command: "nvim '+silent! +PlugInstall!' +qall!"
 
 - name:    Update plugins.
-  command: nvim +PlugUpgrade +PlugInstall +PlugUpdate +qall
+  command: "nvim '+silent! +PlugUpdate!' +qall!"

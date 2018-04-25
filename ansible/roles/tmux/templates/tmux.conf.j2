@@ -39,7 +39,7 @@ set -g @plugin 'tmux-plugins/tmux-pain-control'
 set -g @plugin 'tmux-plugins/tmux-yank'
 
 # Initialize TPM
-run '{{ root }}/plugins/tpm/tpm'
+run '{{ ansible_env.HOME }}/plugins/tpm/tpm'
 
 # cycling between windows
 bind -r C-j select-window -t :-

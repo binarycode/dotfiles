@@ -3,6 +3,7 @@
   pacman:
     name:  '{{ hardware_video_acceleration_driver }}'
     state: present
+  become: yes
 
 - name: Install packages.
   pacman:
@@ -11,3 +12,4 @@
   with_items:
     - youtube-dl
     - mpv
+  become: yes

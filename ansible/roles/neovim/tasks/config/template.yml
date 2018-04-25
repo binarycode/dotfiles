@@ -2,4 +2,4 @@
 - name: 'Create config file {{ item }}'
   template:
     src:  '{{ item }}.j2'
-    dest: '{{ root }}/{{ item }}'
+    dest: '{{ ansible_env.HOME }}/.config/nvim/{{ item }}'

@@ -3,3 +3,4 @@
   pacman:
     name:  ripgrep
     state: present
+  become: yes

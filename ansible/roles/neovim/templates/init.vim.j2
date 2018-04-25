@@ -1,23 +1,23 @@
-source {{ root }}/plugins.vim
-source {{ root }}/base.vim
-source {{ root }}/keys.vim
+source {{ ansible_env.HOME }}/.config/nvim/plugins.vim
+source {{ ansible_env.HOME }}/.config/nvim/base.vim
+source {{ ansible_env.HOME }}/.config/nvim/keys.vim
 
 " PLUGIN CUSTOMIZATION
 
-source {{ root }}/config/fzf.vim
-source {{ root }}/config/molokai.vim
-source {{ root }}/config/nvim-completion-manager.vim
-source {{ root }}/config/vim-easy-align.vim
-source {{ root }}/config/vim-easymotion.vim
-source {{ root }}/config/vim-filebeagle.vim
-source {{ root }}/config/vim-grepper.vim
+source {{ ansible_env.HOME }}/.config/nvim/config/fzf.vim
+source {{ ansible_env.HOME }}/.config/nvim/config/molokai.vim
+source {{ ansible_env.HOME }}/.config/nvim/config/nvim-completion-manager.vim
+source {{ ansible_env.HOME }}/.config/nvim/config/vim-easy-align.vim
+source {{ ansible_env.HOME }}/.config/nvim/config/vim-easymotion.vim
+source {{ ansible_env.HOME }}/.config/nvim/config/vim-filebeagle.vim
+source {{ ansible_env.HOME }}/.config/nvim/config/vim-grepper.vim
 
 " ENVIRONMENTS
 
-source {{ root }}/env/git.vim
+source {{ ansible_env.HOME }}/.config/nvim/env/git.vim
 {% if platformio %}
-source {{ root }}/env/platformio.vim
+source {{ ansible_env.HOME }}/.config/nvim/env/platformio.vim
 {% endif %}
 {% if rails %}
-source {{ root }}/env/rails.vim
+source {{ ansible_env.HOME }}/.config/nvim/env/rails.vim
 {% endif %}

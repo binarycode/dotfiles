@@ -2,4 +2,4 @@
 - name: Install gem config.
   template:
     src:  gemrc.j2
-    dest: ~/.gemrc
+    dest: '{{ ansible_env.HOME }}/.gemrc'

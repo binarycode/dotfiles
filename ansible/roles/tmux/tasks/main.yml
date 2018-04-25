@@ -3,28 +3,33 @@
   pacman:
     name:  tmux
     state: present
+  become: yes
 
 - name: Install xsel package (required for tmux-yank plugin).
   pacman:
     name:  xsel
     state: present
+  become: yes
 
 - name: Install tpm.
   git:
     repo: https://github.com/tmux-plugins/tpm.git
-    dest: '{{ root }}/plugins/tpm'
+    dest: '{{ ansible_env.HOME }}/.tmux/plugins/tpm'
 
-- name:    Install plugins.
-  command: '{{ root }}/plugins/tpm/bin/install_plugins'
-  environment:
-    TPM_PLUGIN_MANAGER_PATH: '{{ root }}/.tmux/plugins'
+- name: Install tmux config.
+  template:
+    src:  tmux.conf.j2
+    dest: '{{ ansible_env.HOME }}/.tmux.conf'
 
-- name: Update plugins.
-  command: '{{ root }}/plugins/tpm/bin/update_plugins all'
-  environment:
-    TPM_PLUGIN_MANAGER_PATH: '{{ root }}/.tmux/plugins'
+- block:
+    - name:    Install plugins.
+      command: '{{ ansible_env.HOME }}/.tmux/plugins/tpm/bin/install_plugins'
 
-- name: Clean unused plugins.
-  command: '{{ root }}/plugins/tpm/bin/clean_plugins'
+    - name:    Update plugins.
+      command: '{{ ansible_env.HOME }}/.tmux/plugins/tpm/bin/update_plugins all'
+
+    - name:    Clean unused plugins.
+      command: '{{ ansible_env.HOME }}/.tmux/plugins/tpm/bin/clean_plugins'
+
   environment:
-    TPM_PLUGIN_MANAGER_PATH: '{{ root }}/.tmux/plugins'
+    TMUX_PLUGIN_MANAGER_PATH: '{{ ansible_env.HOME }}/.tmux/plugins'

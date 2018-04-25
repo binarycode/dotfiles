@@ -1,4 +1,4 @@
-call plug#begin('{{ root }}/bundle')
+call plug#begin('{{ ansible_env.HOME }}/.config/nvim/bundle')
 
 " colorscheme
 Plug 'tomasr/molokai'
@@ -47,7 +47,7 @@ Plug 'junegunn/vim-easy-align'
 
 {% if golang %}
 " Golang support for NCM
-Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '{{ root }}/bundle/gocode/nvim/symlink.sh' }
+Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '{{ ansible_env.HOME }}/.config/nvim/bundle/gocode/nvim/symlink.sh' }
 {% endif %}
 
 {% if platformio %}
