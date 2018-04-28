@@ -14,4 +14,6 @@
 - name: Enable libvirtd service.
   systemd:
     name:    libvirtd
+    state:   started
     enabled: yes
+  become: yes
