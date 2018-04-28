@@ -44,3 +44,6 @@ run '{{ ansible_env.HOME }}/plugins/tpm/tpm'
 # cycling between windows
 bind -r C-j select-window -t :-
 bind -r C-k select-window -t :+
+
+# fix slow escape in neovim
+set -sg escape-time 10
