@@ -21,3 +21,6 @@ source {{ ansible_env.HOME }}/.config/nvim/env/platformio.vim
 {% if rails %}
 source {{ ansible_env.HOME }}/.config/nvim/env/rails.vim
 {% endif %}
+{% if csharp %}
+source {{ ansible_env.HOME }}/.config/nvim/env/csharp.vim
+{% endif %}

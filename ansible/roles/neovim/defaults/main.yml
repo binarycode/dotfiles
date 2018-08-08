@@ -2,3 +2,4 @@
 golang:     false
 platformio: false
 rails:      false
+csharp:     false
