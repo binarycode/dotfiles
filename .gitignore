@@ -1,1 +1,1 @@
-ansible/playbook.retry
+ansible/*.retry
