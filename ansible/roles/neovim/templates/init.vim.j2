@@ -15,9 +15,6 @@ source {{ ansible_env.HOME }}/.config/nvim/config/vim-grepper.vim
 " ENVIRONMENTS
 
 source {{ ansible_env.HOME }}/.config/nvim/env/git.vim
-{% if platformio %}
-source {{ ansible_env.HOME }}/.config/nvim/env/platformio.vim
-{% endif %}
 {% if rails %}
 source {{ ansible_env.HOME }}/.config/nvim/env/rails.vim
 {% endif %}

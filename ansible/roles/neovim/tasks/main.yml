@@ -21,9 +21,6 @@
 - include: config/golang.yml
   when:    golang
 
-- include: config/platformio.yml
-  when:    platformio
-
 - include: config/rails.yml
   when:    rails
 

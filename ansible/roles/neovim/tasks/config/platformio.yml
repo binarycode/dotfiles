@@ -1,4 +1,0 @@
----
-- include: template.yml
-  with_items:
-    - env/platformio.vim
