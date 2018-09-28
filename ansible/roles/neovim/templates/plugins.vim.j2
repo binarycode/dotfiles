@@ -3,9 +3,6 @@ call plug#begin('{{ ansible_env.HOME }}/.config/nvim/bundle')
 " colorscheme
 Plug 'tomasr/molokai'
 
-" autocompletion
-Plug 'roxma/nvim-completion-manager'
-
 " path navigator
 Plug 'jeetsukumaran/vim-filebeagle'
 
@@ -44,16 +41,6 @@ Plug 'itchyny/lightline.vim'
 
 " simplify aligning text
 Plug 'junegunn/vim-easy-align'
-
-{% if golang %}
-" Golang support for NCM
-Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '{{ ansible_env.HOME }}/.config/nvim/bundle/gocode/nvim/symlink.sh' }
-{% endif %}
-
-{% if platformio %}
-" C/C++ support for NCM
-Plug 'roxma/ncm-clang'
-{% endif %}
 
 {% if rails %}
 " rails integration
