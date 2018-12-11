@@ -18,7 +18,6 @@ prompt_hash_color() {
   echo ${colors[$(($sum % ${#colors}))]}
 }
 
-
 autoload -U colors && colors
 
 ZSH_THEME_HOST_COLOR=$(prompt_hash_color $HOST)
@@ -29,3 +28,5 @@ ZSH_THEME_PROMPT="%{$fg[blue]%}->%{$fg_bold[blue]%} %# %{$reset_color%}"
 PROMPT="
 $ZSH_THEME_HOST $ZSH_THEME_PATH
 $ZSH_THEME_PROMPT"
+
+autoload -U compinit && compinit
