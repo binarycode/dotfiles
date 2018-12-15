@@ -1,10 +1,10 @@
 [user]
         name = Igor Sidorov
-        email = igor.sidorov@onapp.com
+        email = igor.sidorov@binarycode.ru
 [color]
         ui = true
 [core]
-        excludesfile = {{ ansible_env.HOME }}/.gitignore_global
+        excludesfile = ~/.gitignore_global
         editor = /usr/bin/nvim
 [alias]
         co = checkout
